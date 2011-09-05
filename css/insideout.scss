@@ -1,0 +1,30 @@
+@import "reset.css";
+
+
+#insideout__menubottom {
+  position:absolute;
+  bottom:0px;
+  width:100%;
+  ul {
+    list-style-type:none;
+    width:100%;
+    li {
+      float:left;
+      width:20%;
+      height:50px;
+      background:#CCC;
+    }
+    
+    li.selected {
+      background:#AAA;
+    }
+  }
+}
+
+#insideout__pm {
+  height:300px;
+}
+
+#insideout__pm__photos {
+ height:300px; 
+}

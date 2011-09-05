@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Biggupp</title>
+    <link rel="stylesheet" href="css/biggupp.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no;" />
+    <script src="js/phonegap-1.0.0.js"></script>
+    <script src="js/NativeControls.js"></script>
+    <script src="js/biggup-ios.js"></script>
+  </head>
+  <body>
+    <script>
+      document.addEventListener('deviceready', onDeviceReady, false);
+
+      function onDeviceReady() {
+        Joshfire.require(['src/app.ios'], function(BigguppApp) {
+          Joshfire.onReady(function() {
+            new BigguppApp();
+          });
+        });
+      }
+    </script>
+    <div id="splashscreen"></div>
+  </body>
+</html>

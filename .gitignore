@@ -1,0 +1,3 @@
+*.pyc
+export/
+export-optimized/
