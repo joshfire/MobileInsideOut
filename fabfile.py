@@ -1,6 +1,6 @@
 from fabric.api import *
 import os,sys,time,re,subprocess,urllib2,platform
-sys.path.append("../../joshfire-framework/build")
+sys.path.append("../joshfire-framework/build")
 from joshfabric import *
 
 
@@ -34,6 +34,7 @@ env.export_dir = os.path.join(os.path.dirname(__file__), "export")
 def localexport():
     spec()
     optimize()
+    templates()
     #compile("export-optimized/")
 
     compiledstamp = int(time.time())
@@ -50,3 +51,6 @@ def localexport():
       local("cp export-optimized/%s %s/js/%s" % (js, env.export_dir, js))
 
     local("rm -rf export-optimized")
+
+def templates():
+    local("node joshfire/adapters/node/bootstrap.js joshfire/adapters/node/utils/templatecompiler.cli.js templates/ "+os.path.join(os.getcwd(),"templates_compiled"))

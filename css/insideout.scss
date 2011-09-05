@@ -1,16 +1,14 @@
 @import "reset.css";
 
 
-#insideout__menubottom {
-  position:absolute;
-  bottom:0px;
+#insideout__browse__menu,#insideout__entry__menu {
   width:100%;
   ul {
     list-style-type:none;
     width:100%;
     li {
       float:left;
-      width:20%;
+      width:60px;
       height:50px;
       background:#CCC;
     }
@@ -21,10 +19,15 @@
   }
 }
 
-#insideout__pm {
+#insideout__browse__menu {
+  position:absolute;
+  bottom:0px;
+}
+
+#insideout__browse__view {
   height:300px;
 }
 
-#insideout__pm__photos {
+#insideout__browse__view__photos {
  height:300px; 
 }
