@@ -1,31 +1,171 @@
 @import "reset.css";
 
+h1{
+font-family: "Georgia", Arial Black, Arial, Verdana, serif;
+}
+
+#insideout__browse__header{
+
+ height: 50px; 
+ background-image:
+    url(../img/logo.png), 
+    -webkit-gradient(
+    linear,
+    right top,
+    left top,
+    color-stop(1, rgb(217,217,217)),
+    color-stop(0.52, rgb(255,255,255)),
+    color-stop(0, rgb(217,217,217)));  
+  background-repeat: no-repeat, repeat;
+  -webkit-box-shadow: #333434 0 0 12px;  
+  background-position:5% 50%;
+  border: none;
+
+}
+
+#insideout__browse__uploadbutton{
+ width:75px;
+ height:66px;
+ border-radius: 0px;
+ border: 0;
+ font-family: 'Anton', sans-serif;
+ font-size: 15px;
+ line-height: 100px;
+ margin-left: 230px;
+ margin-top: -50px;
+ padding: 0;
+ -webkit-box-shadow: #333434 2px 2px 12px;
+ background-image:
+    url(../img/upload.png), -webkit-gradient(
+    linear,
+    right top,
+    left top,
+    color-stop(0.39, rgb(222,222,222)),
+    color-stop(0.7, rgb(242,242,242)),
+    color-stop(1, rgb(222,222,222))); 
+ background-repeat: no-repeat, repeat;
+ background-position:50% 35%, 0 0;
+
+}
 
 #insideout__browse__menu,#insideout__entry__menu {
   width:100%;
+  background-image: -webkit-gradient(
+    linear,
+    right top,
+    left top,
+    color-stop(1, rgb(217,217,217)),
+    color-stop(0.52, rgb(255,255,255)),
+    color-stop(0, rgb(217,217,217)));
+    
+  background-image: -moz-linear-gradient(
+    right center,
+    rgb(217,217,217) 100%,
+    rgb(255,255,255) 52%,
+    rgb(217,217,217) 0%);
+  
   ul {
     list-style-type:none;
-    width:100%;
+    border-top: 1.5px solid #000000;
+    width:100%;	
+    
+    
     li {
       float:left;
-      width:60px;
-      height:50px;
-      background:#CCC;
-    }
-    
-    li.selected {
-      background:#AAA;
-    }
+      width:79px;
+      height:46px;
+      font-family: 'Anton', sans-serif;
+      color: #3c3b3b;
+      font-size: 11px;
+      text-align: center;
+      line-height: 69px;
+      
+      
+      }
+  
+  
+     
+	#insideout__browse__menu_photos {
+      background-image:url(../img/mosaic.png);
+      background-repeat:no-repeat;
+      background-position:50% 50%;
+      border-right: 1.5px solid #ff0000;
+      }
+      
+    #insideout__browse__menu_photos.selected {
+      background-image:url(../img/mosaic-survol.png);
+      background-repeat:no-repeat;
+      background-position:50% 50%;
+      color: #000000;
+      
+      }  
+      
+    #insideout__browse__menu_aboutinside {
+      background-image:url(../img/insideout.png);
+      background-repeat:no-repeat;
+      background-position:50% 50%;
+      border-right: 1.5px solid #ff0000;
+      }  
+      
+    #insideout__browse__menu_aboutinside.selected {
+      background-image:url(../img/insideout-survol.png);
+      background-repeat:no-repeat;
+      background-position:50% 50%;
+      color: #000000;
+      }  
+      
+    #insideout__browse__menu_aboutjr {
+      background-image:url(../img/jr.png);
+      background-repeat:no-repeat;
+      background-position:50% 50%;
+      border-right: 1.5px solid #ff0000;
+      } 
+      
+    #insideout__browse__menu_aboutjr.selected {
+      background-image:url(../img/jr-survol.png);
+      background-repeat:no-repeat;
+      background-position:50% 50%;
+      color: #000000;
+      }  
+      
+    #insideout__browse__menu_share {
+      background-image:url(../img/share.png);
+      background-repeat:no-repeat;
+      background-position:50% 50%;
+      
+      }    
+    #insideout__browse__menu_share.selected {
+      background-image:url(../img/share-survol.png);
+      background-repeat:no-repeat;
+      background-position:50% 50%;
+      color: #000000;
+      }    
+
+      
   }
 }
 
 #insideout__browse__menu {
   position:absolute;
   bottom:0px;
+
+  
+  
 }
 
 #insideout__browse__view {
-  height:300px;
+  height:350px;
+  background-image: -moz-linear-gradient(top, white, #d2d1d1);
+  background-image: -webkit-gradient(linear, center top, center bottom, from(white), to(#d2d1d1));
+  
+}
+
+#insideout__browse__view__share{
+  color: #000000;
+  font-family: 'Anton', sans-serif;
+  font-size: 45px;
+  margin-left: 10px;
+  
 }
 
 #insideout__browse__view__photos {

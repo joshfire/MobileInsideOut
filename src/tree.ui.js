@@ -17,12 +17,12 @@ Joshfire.define(['joshfire/class', 'joshfire/tree.ui', 'joshfire/vendor/undersco
               {
                 id:'header',
                 type:UIPanel,
-                content:"header"
+                content:""
               },
               {
                 id:'uploadbutton',
                 type:UIButton,
-                label:"upload",
+                label:"PARTICIPATE",
                 onSelect:function() {
                   app.ui.element('').switchTo("upload");
                 }
@@ -80,11 +80,11 @@ Joshfire.define(['joshfire/class', 'joshfire/tree.ui', 'joshfire/vendor/undersco
                 type:'list', //UIList,
                 data:[
                   // TODO IMAGES
-                  {'id':'photos','label':'Mosaic'},
+                  {'id':'photos','label':'MOSAIC'},
                   //{'id':'map','label':'Map'},
-                  {'id':'aboutinside','label':'Inside'},
-                  {'id':'aboutjr','label':'About'},
-                  {'id':'share','label':'Share'}
+                  {'id':'aboutinside','label':'INSIDE OUT'},
+                  {'id':'aboutjr','label':'ABOUT'},
+                  {'id':'share','label':'SHARE'}
                 ] 
               }
             
@@ -140,7 +140,7 @@ Joshfire.define(['joshfire/class', 'joshfire/tree.ui', 'joshfire/vendor/undersco
                     id:'register',
                     type:UIPanel,
                     autoShow:true,
-                    content:"Register form"
+                    content:"Register form  dsfsd"
                   },
                   
                   {
