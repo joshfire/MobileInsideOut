@@ -1,8 +1,43 @@
 @import "reset.css";
 
-h1{
-font-family: "Georgia", Arial Black, Arial, Verdana, serif;
+#titre{
+ font-family: 'Anton', sans-serif;
+ font-size: 39px;
+ margin-bottom: 3px;
+ line-height: 40px;
 }
+
+#soustitre{
+ font-family: 'HelveticaNeue-Bold', sans-serif;
+ font-size: 18px;
+ color: #272727;
+ margin-top: 3px;
+ margin-bottom: 3px;
+ line-height: 22px;
+ float: left;
+}
+
+#p{
+ font-family: 'HelveticaNeue', sans-serif;
+ font-size: 18px;
+ line-height: 22px;
+ margin-right: 14px;
+ float: left;
+ width: 290px;
+}
+
+#jrphoto{
+ float: left;
+ margin-top: 3px;
+}
+
+#share{
+ font-family: 'Anton', sans-serif;
+ font-size: 25px;
+ line-height: 30px;
+ margin-top: 10px;
+}
+
 
 #insideout__browse__header{
 
@@ -17,7 +52,7 @@ font-family: "Georgia", Arial Black, Arial, Verdana, serif;
     color-stop(0.52, rgb(255,255,255)),
     color-stop(0, rgb(217,217,217)));  
   background-repeat: no-repeat, repeat;
-  -webkit-box-shadow: #333434 0 0 12px;  
+ -webkit-box-shadow: #333434 0px 0px 10px;  
   background-position:5% 50%;
   border: none;
 
@@ -30,13 +65,14 @@ font-family: "Georgia", Arial Black, Arial, Verdana, serif;
  border: 0;
  font-family: 'Anton', sans-serif;
  font-size: 15px;
- line-height: 100px;
+ line-height: 105px;
  margin-left: 230px;
  margin-top: -50px;
  padding: 0;
- -webkit-box-shadow: #333434 2px 2px 12px;
+ -webkit-box-shadow: #333434 0px 0px 10px;  
  background-image:
-    url(../img/upload.png), -webkit-gradient(
+    url(../img/upload.png), 
+    -webkit-gradient(
     linear,
     right top,
     left top,
@@ -44,7 +80,7 @@ font-family: "Georgia", Arial Black, Arial, Verdana, serif;
     color-stop(0.7, rgb(242,242,242)),
     color-stop(1, rgb(222,222,222))); 
  background-repeat: no-repeat, repeat;
- background-position:50% 35%, 0 0;
+ background-position:50% 30%, 0 0;
 
 }
 
@@ -74,9 +110,9 @@ font-family: "Georgia", Arial Black, Arial, Verdana, serif;
       float:left;
       width:79px;
       height:46px;
-      font-family: 'Anton', sans-serif;
+      font-family: 'HelveticaNeue-Bold', sans-serif;
       color: #3c3b3b;
-      font-size: 11px;
+      font-size: 10px;
       text-align: center;
       line-height: 69px;
       
@@ -86,52 +122,51 @@ font-family: "Georgia", Arial Black, Arial, Verdana, serif;
   
      
 	#insideout__browse__menu_photos {
-      background-image:url(../img/mosaic.png);
+      background-image:url(../img/mosaic.png), url(../img/separation-menu.png);
       background-repeat:no-repeat;
-      background-position:50% 50%;
-      border-right: 1.5px solid #ff0000;
+      background-position: 50% 50%, 100% 100%;
       }
       
     #insideout__browse__menu_photos.selected {
-      background-image:url(../img/mosaic-survol.png);
+      background-image:url(../img/mosaic-survol.png), url(../img/separation-menu.png);
       background-repeat:no-repeat;
-      background-position:50% 50%;
+      background-position: 50% 50%, 100% 100%;
       color: #000000;
       
       }  
       
     #insideout__browse__menu_aboutinside {
-      background-image:url(../img/insideout.png);
+      background-image:url(../img/insideout.png), url(../img/separation-menu.png);
       background-repeat:no-repeat;
-      background-position:50% 50%;
-      border-right: 1.5px solid #ff0000;
+      background-position: 50% 50%, 100% 100%;
+      
       }  
       
     #insideout__browse__menu_aboutinside.selected {
-      background-image:url(../img/insideout-survol.png);
+      background-image:url(../img/insideout-survol.png), url(../img/separation-menu.png);
       background-repeat:no-repeat;
-      background-position:50% 50%;
+      background-position: 50% 50%, 100% 100%;
       color: #000000;
       }  
       
     #insideout__browse__menu_aboutjr {
-      background-image:url(../img/jr.png);
+      background-image:url(../img/jr.png), url(../img/separation-menu.png);
       background-repeat:no-repeat;
-      background-position:50% 50%;
-      border-right: 1.5px solid #ff0000;
+      background-position: 50% 50%, 100% 100%;
+
       } 
       
     #insideout__browse__menu_aboutjr.selected {
-      background-image:url(../img/jr-survol.png);
+      background-image:url(../img/jr-survol.png), url(../img/separation-menu.png);
       background-repeat:no-repeat;
-      background-position:50% 50%;
+      background-position: 50% 50%, 100% 100%; 
       color: #000000;
       }  
       
     #insideout__browse__menu_share {
-      background-image:url(../img/share.png);
+      background-image:url(../img/share.png) ;
       background-repeat:no-repeat;
-      background-position:50% 50%;
+      background-position: 50% 50%;
       
       }    
     #insideout__browse__menu_share.selected {
@@ -160,12 +195,19 @@ font-family: "Georgia", Arial Black, Arial, Verdana, serif;
   
 }
 
+#insideout__browse__view__aboutinside{
+  color: #000000;
+  margin-left: 14px;
+}
+
+#insideout__browse__view__aboutjr{
+  color: #000000;
+  margin-left: 14px;
+}
+
 #insideout__browse__view__share{
   color: #000000;
-  font-family: 'Anton', sans-serif;
-  font-size: 45px;
-  margin-left: 10px;
-  
+  margin-left: 14px;
 }
 
 #insideout__browse__view__photos {
