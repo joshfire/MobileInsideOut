@@ -1,4 +1,4 @@
-Joshfire.define(['joshfire/class', 'joshfire/tree.ui', 'joshfire/vendor/underscore','joshfire/uielements/list','joshfire/uielements/panel','joshfire/uielements/panel.manager','joshfire/uielements/map','templates_compiled/js/share','templates_compiled/js/aboutinsideout','templates_compiled/js/aboutjr','joshfire/uielements/button'], function(Class, UITree, _,UIList,UIPanel,UIPanelManager,UIMap,TplShare,TplAboutInsideOut,TplAboutJR,UIButton) {
+Joshfire.define(['joshfire/class', 'joshfire/tree.ui', 'joshfire/vendor/underscore','joshfire/uielements/list','joshfire/uielements/panel','joshfire/uielements/panel.manager','joshfire/uielements/map','templates_compiled/js/share','templates_compiled/js/aboutinsideout','templates_compiled/js/aboutjr','templates_compiled/js/registerform','joshfire/uielements/button'], function(Class, UITree, _,UIList,UIPanel,UIPanelManager,UIMap,TplShare,TplAboutInsideOut,TplAboutJR,TplRegisterForm,UIButton) {
 
   return Class(UITree, {
 
@@ -56,14 +56,16 @@ Joshfire.define(['joshfire/class', 'joshfire/tree.ui', 'joshfire/vendor/undersco
                   },*/
                   {
                     'id':'aboutinside',
-                    type:UIPanel,
-                    innerTemplate:TplAboutInsideOut,
+                    type:UIList, //List instead of panel so that we can scroll
+                    itemInnerTemplate:TplAboutInsideOut,
+                    data:[{"id":"void"}],
                     autoShow:false
                   },
                   {
                     'id':'aboutjr',
-                    type:UIPanel,
-                    innerTemplate:TplAboutJR,
+                    type:UIList,
+                    itemInnerTemplate:TplAboutJR,
+                    data:[{"id":"void"}],
                     autoShow:false
                   },
                   {
@@ -77,7 +79,7 @@ Joshfire.define(['joshfire/class', 'joshfire/tree.ui', 'joshfire/vendor/undersco
 
               {
                 id: 'menu',
-                type:'list', //UIList,
+                type:UIList,
                 data:[
                   // TODO IMAGES
                   {'id':'photos','label':'MOSAIC'},
@@ -140,7 +142,7 @@ Joshfire.define(['joshfire/class', 'joshfire/tree.ui', 'joshfire/vendor/undersco
                     id:'register',
                     type:UIPanel,
                     autoShow:true,
-                    content:"Register form  dsfsd"
+                    innerTemplate:TplRegisterForm
                   },
                   
                   {
@@ -183,7 +185,7 @@ Joshfire.define(['joshfire/class', 'joshfire/tree.ui', 'joshfire/vendor/undersco
               
               {
                 id: 'menu',
-                type:'list', //UIList,
+                type:UIList,
                 data:[
                   // TODO IMAGES
                   {'id':'photo','label':'Photo'},
