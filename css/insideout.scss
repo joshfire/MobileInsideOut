@@ -201,21 +201,9 @@
   background-image: -webkit-gradient(linear, center top, center bottom, from(white), to(#d2d1d1));
 }
 
-#insideout__browse__view__aboutinside{
+#insideout__browse__view > div {
+  height:350px;
   color: #000000;
-  margin-left: 14px;
+  margin-left: 14px;  
 }
 
-#insideout__browse__view__aboutjr{
-  color: #000000;
-  margin-left: 14px;
-}
-
-#insideout__browse__view__share{
-  color: #000000;
-  margin-left: 14px;
-}
-
-#insideout__browse__view__photos {
- height:300px; 
-}

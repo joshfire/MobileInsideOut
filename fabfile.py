@@ -12,11 +12,9 @@ def install():
     local('npm install')
 
 def serve():
-    spec()
     local("node server.js")
 
 def nodemon():
-    spec()
     local("nodemon server.js")
 
 
