@@ -14,21 +14,21 @@
  margin-top: 3px;
  margin-bottom: 3px;
  line-height: 22px;
- float: left;
 }
 
 #p{
  font-family: 'HelveticaNeue', sans-serif;
- font-size: 18px;
+ font-size: 16px;
  line-height: 22px;
  margin-right: 14px;
- float: left;
  width: 290px;
 }
 
 #jrphoto{
  float: left;
  margin-top: 3px;
+ margin-right: 10px;
+ width: 145px;
 }
 
 #share{
@@ -55,12 +55,13 @@
  -webkit-box-shadow: #333434 0px 0px 10px;  
   background-position:5% 50%;
   border: none;
-
 }
 
-#insideout__browse__uploadbutton{
- width:75px;
- height:66px;
+#insideout__browse__uploadbutton {
+  position: relative;
+  z-index: 10;
+ width: 75px;
+ height: 66px;
  border-radius: 0px;
  border: 0;
  font-family: 'Anton', sans-serif;
@@ -76,11 +77,11 @@
     linear,
     right top,
     left top,
-    color-stop(0.39, rgb(222,222,222)),
-    color-stop(0.7, rgb(242,242,242)),
-    color-stop(1, rgb(222,222,222))); 
+    color-stop(0.39, rgb(222, 222, 222)),
+    color-stop(0.7, rgb(242, 242, 242)),
+    color-stop(1, rgb(222, 222, 222))); 
  background-repeat: no-repeat, repeat;
- background-position:50% 30%, 0 0;
+ background-position: 50% 30%, 0 0;
 
 }
 
@@ -101,8 +102,10 @@
     rgb(217,217,217) 0%);
   
   ul {
+ 	position: relative;
+ 	z-index: 10;
     list-style-type:none;
-    border-top: 1.5px solid #000000;
+    border-top: 1px solid #000000;
     width:100%;	
     
     
@@ -189,10 +192,13 @@
 }
 
 #insideout__browse__view {
-  height:350px;
-  background-image: -moz-linear-gradient(top, white, #d2d1d1);
+  position: absolute;
+  z-index: 1;
+  top: 65px;
+  left: 0;
+  right: 0;
+  bottom: 46px;
   background-image: -webkit-gradient(linear, center top, center bottom, from(white), to(#d2d1d1));
-  
 }
 
 #insideout__browse__view__aboutinside{
