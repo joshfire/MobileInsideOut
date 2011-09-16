@@ -1,4 +1,4 @@
-Joshfire.define(['joshfire/class', 'joshfire/tree.ui', 'joshfire/vendor/underscore','joshfire/uielements/list','joshfire/uielements/panel','joshfire/uielements/panel.manager','joshfire/uielements/map','templates_compiled/js/share','templates_compiled/js/aboutinsideout','templates_compiled/js/aboutjr','templates_compiled/js/registerform','joshfire/uielements/button'], function(Class, UITree, _,UIList,UIPanel,UIPanelManager,UIMap,TplShare,TplAboutInsideOut,TplAboutJR,TplRegisterForm,UIButton) {
+Joshfire.define(['joshfire/class', 'joshfire/tree.ui', 'joshfire/vendor/underscore','joshfire/uielements/list','joshfire/uielements/panel','joshfire/uielements/panel.manager','joshfire/uielements/map','templates_compiled/js/share','templates_compiled/js/aboutinsideout','templates_compiled/js/aboutjr','templates_compiled/js/registerform','joshfire/uielements/button','joshfire/uielements/forminput'], function(Class, UITree, _,UIList,UIPanel,UIPanelManager,UIMap,TplShare,TplAboutInsideOut,TplAboutJR,TplRegisterForm,UIButton, FormInput) {
 
   return Class(UITree, {
 
@@ -101,13 +101,73 @@ Joshfire.define(['joshfire/class', 'joshfire/tree.ui', 'joshfire/vendor/undersco
               {
                 id:'header',
                 type:UIPanel,
-                content:"header upload"
+                children: [
+                  {
+                    id: 'prev',
+                    type: UIButton,
+                    label: 'Prev'
+                  },
+                  {
+                    id: 'home',
+                    type: UIButton,
+                    label: 'Home'
+                  }
+                ]
               },
-              {
+			  {
+			  	id: 'signinform',
+			  	type: UIPanel,
+			  	children: [
+			  	  {
+			  	    id: 'title',
+			  	    type: UIPanel,
+			  	    content: 'Login'
+			  	  },
+			  	  {
+			  	    id: 'login',
+			  	    type: FormInput,
+			  	    inputType: 'text',
+			  	    label: 'Login'
+			  	  },
+			  	  {
+			  	    id: 'password',
+			  	    type: FormInput,
+			  	    inputType: 'password',
+			  	    label: 'Password'
+			  	  },
+			  	  {
+			  	    id: 'ok',
+			  	    type: UIButton,
+			  	    label: 'Ok'
+			  	  },
+			  	  {
+			  	    id: 'forgot',
+			  	    type: UIButton,
+			  	    label: 'Forgot password?'
+			  	  }
+			  	]
+			  },
+			  {
+			  	id: 'footer',
+			  	type: UIPanel,
+			  	children: [
+			  	  {
+			  	    id: 'title',
+			  	    type: UIPanel,
+			  	    content: 'Not register?'
+			  	  },
+			  	  {
+			  	    id: 'createaccount',
+			  	    type: UIButton,
+			  	    label: 'Create account'
+			  	  }
+			  	]
+			  }
+			  /*{
                 id:'view',
-                type:UIPanelManager,
+                type: UIPanelManager,
                 children:[
-                  /*{
+                  {
                     id:'signin_or_register',
                     type:UIPanel,
                     autoShow:true,
@@ -136,8 +196,6 @@ Joshfire.define(['joshfire/class', 'joshfire/tree.ui', 'joshfire/vendor/undersco
                     autoShow:false,
                     content:"Sign in form"
                   },
-                  */
-                  
                   {
                     id:'register',
                     type:UIPanel,
@@ -168,6 +226,7 @@ Joshfire.define(['joshfire/class', 'joshfire/tree.ui', 'joshfire/vendor/undersco
                 
                 ]
               }
+*/
             ]
           },
           

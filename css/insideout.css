@@ -1,4 +1,5 @@
 @import url(reset.css);
+/* home */
 #insideout__browse__header, #insideout__upload__header {
   height: 50px;
   background-image: url(../img/logo.png), -webkit-gradient(linear, right top, left top, color-stop(1, #d9d9d9), color-stop(0.52, white), color-stop(0, #d9d9d9));
@@ -143,3 +144,17 @@
   font-size: 25px;
   line-height: 30px;
   margin-top: 10px; }
+
+/* participation */
+#insideout__upload__header__home {
+  background-position: 50% 30%, 0 0;
+  background-repeat: no-repeat, repeat;
+  background-image: -webkit-gradient(linear, center top, center bottom, from(white), to(#d2d1d1));
+  -webkit-box-shadow: #333434 0px 0px 2px;
+  height: 32px;
+  width: 32px;
+  margin-left: 230px;
+  margin-top: -12px;
+  padding: 0;
+  position: relative;
+  z-index: 10; }
