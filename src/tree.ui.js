@@ -105,64 +105,148 @@ Joshfire.define(['joshfire/class', 'joshfire/tree.ui', 'joshfire/vendor/undersco
                   {
                     id: 'prev',
                     type: UIButton,
-                    label: 'Prev'
+                    label: '',
+                    onSelect:function() {
+                    	app.ui.element('').switchTo("browse");
+                    }
                   },
                   {
                     id: 'home',
                     type: UIButton,
-                    label: 'Home'
+                    label: '',
+                    onSelect:function() {
+                    	app.ui.element('').switchTo("browse");
+                    }
                   }
                 ]
               },
-			  {
-			  	id: 'signinform',
-			  	type: UIPanel,
-			  	children: [
-			  	  {
-			  	    id: 'title',
-			  	    type: UIPanel,
-			  	    content: 'Login'
-			  	  },
-			  	  {
-			  	    id: 'login',
-			  	    type: FormInput,
-			  	    inputType: 'text',
-			  	    label: 'Login'
-			  	  },
-			  	  {
-			  	    id: 'password',
-			  	    type: FormInput,
-			  	    inputType: 'password',
-			  	    label: 'Password'
-			  	  },
-			  	  {
-			  	    id: 'ok',
-			  	    type: UIButton,
-			  	    label: 'Ok'
-			  	  },
-			  	  {
-			  	    id: 'forgot',
-			  	    type: UIButton,
-			  	    label: 'Forgot password?'
-			  	  }
-			  	]
+              {
+                id:'view',
+                type:UIPanelManager,
+                children:[
+				  {
+				  	id: 'signinform',
+				  	type: UIPanel,
+				  	children: [
+				  	  {
+				  	    id: 'title',
+				  	    type: UIPanel,
+				  	    content: 'Login'
+				  	  },
+				  	  {
+				  	    id: 'login',
+				  	    type: FormInput,
+				  	    inputType: 'text',
+				  	    label: 'Login'
+				  	  },
+				  	  {
+				  	    id: 'password',
+				  	    type: FormInput,
+				  	    inputType: 'password',
+				  	    label: 'Password'
+				  	  },
+				  	  {
+				  	    id: 'ok',
+				  	    type: UIButton,
+				  	    label: 'Ok',
+				  	    onSelect:function() {
+				  	    	app.ui.element('/upload/view').switchTo('phototypeform');
+				  	    }
+				  	  },
+				  	  {
+				  	    id: 'forgot',
+				  	    type: UIButton,
+				  	    label: 'Forgot password',
+				  	    onSelect:function() {
+				  	    	window.open('http://www.insideoutproject.net/user/forgotPassword');
+				  	    }
+				  	  },
+				  	  {
+					  	id: 'footer',
+					  	type: UIPanel,
+					  	children: [
+					  	  {
+						  	    id: 'title',
+						  	    type: UIPanel,
+						  	    content: 'Not registered?'
+						  	  },
+						  	  {
+						  	    id: 'createaccount',
+						  	    type: UIButton,
+						  	    label: 'Create account',
+						  	    onSelect:function() {
+							  	    app.ui.element('/upload/view').switchTo('registerform');
+							  	}
+						  	  }
+					  	]
+					  }
+				  	]
+				  },
+				  
+				  {
+				  	id: 'registerform',
+				  	type: UIPanel,
+				  	autoShow:false,
+				  	children: [
+				  	  {
+				  	    id: 'title',
+				  	    type: UIPanel,
+				  	    content: 'Register'
+				  	  },
+				  	  {
+				  	    id: 'login',
+				  	    type: FormInput,
+				  	    inputType: 'text',
+				  	    label: 'Login'
+				  	  },
+				  	  {
+				  	    id: 'password',
+				  	    type: FormInput,
+				  	    inputType: 'password',
+				  	    label: 'Password'
+				  	  },
+				  	  {
+				  	    id: 'ok',
+				  	    type: UIButton,
+				  	    label: 'Ok',
+				  	    onSelect:function() {
+				  	    	
+				  	    }
+				  	  },
+				  	  {
+				  	    id: 'forgot',
+				  	    type: UIButton,
+				  	    label: 'Forgot password'
+				  	  }
+				  	  
+				  	]
+				  },
+				  
+				  {
+				  	id: 'phototypeform',
+				  	type: UIPanel,
+				  	autoShow:false,
+				  	children: [
+				  	  {
+				  	    id: 'title',
+				  	    type: UIPanel,
+				  	    content: 'Choose photo upload'
+				  	  },
+				  	  {
+				  	    id: 'portrait',
+				  	    type: UIButton,
+				  	    label: 'p'
+				  	  },
+				  	  {
+				  	    id: 'street',
+				  	    type: UIButton,
+				  	    label: 's'
+				  	  }
+				  	]
+				  }
+				]
 			  },
-			  {
-			  	id: 'footer',
-			  	type: UIPanel,
-			  	children: [
-			  	  {
-			  	    id: 'title',
-			  	    type: UIPanel,
-			  	    content: 'Not register?'
-			  	  },
-			  	  {
-			  	    id: 'createaccount',
-			  	    type: UIButton,
-			  	    label: 'Create account'
-			  	  }
-			  	]
-			  }
+			  
 			  /*{
                 id:'view',
                 type: UIPanelManager,

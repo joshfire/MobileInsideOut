@@ -4,9 +4,12 @@
   height: 50px;
   background-image: url(../img/logo.png), -webkit-gradient(linear, right top, left top, color-stop(1, #d9d9d9), color-stop(0.52, white), color-stop(0, #d9d9d9));
   background-repeat: no-repeat, repeat;
-  -webkit-box-shadow: #333434 0px 0px 10px;
+  -webkit-box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.25);
   background-position: 5% 50%;
   border: none; }
+
+#insideout__upload__header {
+  background-position: 12% 50%; }
 
 #insideout__browse__uploadbutton {
   position: relative;
@@ -21,7 +24,7 @@
   margin-left: 230px;
   margin-top: -50px;
   padding: 0;
-  -webkit-box-shadow: #333434 0px 0px 10px;
+  -webkit-box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.25);
   background-image: url(../img/upload.png), -webkit-gradient(linear, right top, left top, color-stop(0.39, #dedede), color-stop(0.7, #f2f2f2), color-stop(1, #dedede));
   background-repeat: no-repeat, repeat;
   background-position: 50% 30%, 0 0; }
@@ -107,7 +110,7 @@
   line-height: 40px; }
 
 #soustitre {
-  font-family: 'HelveticaNeue-Bold', sans-serif;
+  font-family: 'Helvetica Neue-Bold', sans-serif;
   font-size: 18px;
   color: #272727;
   margin-top: 3px;
@@ -115,7 +118,7 @@
   line-height: 22px; }
 
 #question {
-  font-family: 'HelveticaNeue-Bold', sans-serif;
+  font-family: 'Helvetica Neue-Bold', sans-serif;
   font-size: 15px;
   color: #272727;
   margin-top: 10px;
@@ -123,7 +126,7 @@
   line-height: 22px; }
 
 #p {
-  font-family: 'HelveticaNeue', sans-serif;
+  font-family: 'Helvetica Neue', sans-serif;
   font-size: 16px;
   line-height: 22px;
   margin-right: 14px;
@@ -146,15 +149,130 @@
   margin-top: 10px; }
 
 /* participation */
+#insideout__upload {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(white), to(#c2c0c0)); }
+
 #insideout__upload__header__home {
   background-position: 50% 30%, 0 0;
   background-repeat: no-repeat, repeat;
-  background-image: -webkit-gradient(linear, center top, center bottom, from(white), to(#d2d1d1));
-  -webkit-box-shadow: #333434 0px 0px 2px;
-  height: 32px;
-  width: 32px;
-  margin-left: 230px;
-  margin-top: -12px;
+  background-image: url(../img/home.png), -webkit-gradient(linear, center top, center bottom, from(#d2d1d1), to(#ececec));
+  border-radius: 0px;
+  -webkit-box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.25);
+  border: 0;
+  height: 35px;
+  width: 35px;
+  margin-left: 278px;
+  margin-top: -42px;
   padding: 0;
   position: relative;
   z-index: 10; }
+
+#insideout__upload__header__prev {
+  background-image: url(../img/retour.png);
+  background-repeat: no-repeat;
+  -webkit-appearance: none;
+  height: 50px;
+  border: none; }
+
+#insideout__upload__view__signinform {
+  margin-left: 41px;
+  margin-top: 53px;
+  background-image: url(../img/login.png);
+  background-repeat: no-repeat; }
+
+#insideout__upload__view__signinform__title {
+  font-family: 'Anton', sans-serif;
+  font-size: 20px;
+  margin-left: 15px; }
+
+#insideout__upload__view__signinform__login,
+#insideout__upload__view__signinform__password {
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 13px;
+  margin-top: 15px;
+  width: 237px;
+  -webkit-box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.25);
+  border: 1px solid black;
+  height: 28px; }
+
+#insideout__upload__view__signinform__login label,
+#insideout__upload__view__signinform__password label {
+  -webkit-box-sizing: border-box;
+  display: block;
+  float: left;
+  color: #fff;
+  background: #000;
+  width: 72px;
+  height: 28px;
+  line-height: 28px;
+  padding-left: 5px;
+  margin: 0; }
+
+#insideout__upload__view__signinform__login_input,
+#insideout__upload__view__signinform__password_input {
+  -webkit-appearance: none;
+  -webkit-box-shadow: none;
+  -webkit-box-sizing: border-box;
+  padding: 0 0 0 8px;
+  margin: 0;
+  display: block;
+  float: left;
+  border: 0;
+  height: 28px;
+  width: 165px;
+  /*  border-left: 1px solid #000; */
+  border-radius: 0;
+  background: url("../img/triangle.png") no-repeat left center; }
+
+#insideout__upload__view__signinform__ok {
+  border-radius: 0px;
+  border: 0px;
+  height: 28px;
+  width: 100px;
+  -webkit-appearance: none;
+  background-image: -webkit-gradient(linear, center top, center bottom, from(black), to(black));
+  -webkit-box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.25);
+  color: white;
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 13px;
+  margin-top: 15px;
+  margin-left: 137px; }
+
+#insideout__upload__view__signinform__forgot {
+  -webkit-appearance: none;
+  border-radius: 0px;
+  border: 0px;
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 13px;
+  margin-top: 10px;
+  margin-left: 124px;
+  text-decoration: underline;
+  background: transparent; }
+
+#insideout__upload__view__signinform__footer {
+  font-family: 'Anton', sans-serif;
+  font-size: 20px;
+  height: 95px;
+  width: 320px;
+  background-image: url(../img/create.png), -webkit-gradient(linear, center top, center bottom, from(#b6b6b6), to(#fffefe));
+  margin-top: 70px;
+  margin-left: -41px;
+  background-repeat: no-repeat, repeat; }
+
+#insideout__upload__view__signinform__footer__title {
+  text-align: center;
+  padding-top: 18px;
+  padding-bottom: 10px; }
+
+#insideout__upload__view__signinform__footer__createaccount {
+  margin: auto;
+  background-image: -webkit-gradient(linear, center top, center bottom, from(black), to(black));
+  -webkit-box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.25);
+  color: white;
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 13px;
+  border: 0px;
+  height: 28px;
+  width: 110px;
+  border-radius: 0px;
+  text-align: center; }
