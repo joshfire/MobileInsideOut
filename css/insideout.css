@@ -276,3 +276,116 @@
   width: 110px;
   border-radius: 0px;
   text-align: center; }
+
+/* Choose photo */
+#insideout__upload__view__phototypeform {
+  height: 412px;
+  width: 320px;
+  background-image: url(../img/choix.png); }
+
+#insideout__upload__view__phototypeform__portrait,
+#insideout__upload__view__phototypeform__street {
+  border-radius: 0px;
+  border: 0px;
+  height: 28px;
+  width: 100px;
+  -webkit-appearance: none;
+  background-image: -webkit-gradient(linear, center top, center bottom, from(black), to(black));
+  -webkit-box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.25);
+  color: white;
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 13px;
+  margin-top: 8px;
+  margin-left: 10px; }
+
+#insideout__upload__view__phototypeform__street {
+  margin-top: 20px;
+  margin-left: 210px; }
+
+#insideout__upload__view__phototypeform__title,
+#insideout__upload__view__phototypeform__title2 {
+  font-family: 'Anton', sans-serif;
+  font-size: 15px; }
+
+#insideout__upload__view__phototypeform__title {
+  padding-top: 145px;
+  padding-left: 10px; }
+
+#insideout__upload__view__phototypeform__title2 {
+  padding: 8px 10px 0 130px;
+  text-align: right; }
+
+/* User registration */
+#insideout__upload__view__registerform {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(white), to(#c2c0c0));
+  height: 430px; }
+
+#insideout__upload__view__registerform {
+  margin-left: 41px;
+  margin-top: 53px;
+  background-image: url(../img/login.png);
+  background-repeat: no-repeat; }
+
+#insideout__upload__view__registerform__title {
+  font-family: 'Anton', sans-serif;
+  font-size: 20px;
+  margin-left: 15px; }
+
+#insideout__upload__view__registerform__firstname,
+#insideout__upload__view__registerform__lastname,
+#insideout__upload__view__registerform__email,
+#insideout__upload__view__registerform__password {
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 13px;
+  margin-top: 15px;
+  width: 237px;
+  -webkit-box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.25);
+  border: 1px solid black;
+  height: 28px; }
+
+#insideout__upload__view__registerform__firstname label,
+#insideout__upload__view__registerform__lastname label,
+#insideout__upload__view__registerform__email label,
+#insideout__upload__view__registerform__password label {
+  -webkit-box-sizing: border-box;
+  display: block;
+  float: left;
+  color: #fff;
+  background: #000;
+  width: 80px;
+  height: 28px;
+  line-height: 28px;
+  padding-left: 5px;
+  margin: 0; }
+
+#insideout__upload__view__registerform__firstname_input,
+#insideout__upload__view__registerform__lastname_input,
+#insideout__upload__view__registerform__email_input,
+#insideout__upload__view__registerform__password_input {
+  -webkit-appearance: none;
+  -webkit-box-shadow: none;
+  -webkit-box-sizing: border-box;
+  padding: 0 0 0 8px;
+  margin: 0;
+  display: block;
+  float: left;
+  border: 0;
+  height: 28px;
+  width: 157px;
+  /*  border-left: 1px solid #000; */
+  border-radius: 0;
+  background: url("../img/triangle.png") no-repeat left center; }
+
+#insideout__upload__view__registerform__ok {
+  border-radius: 0px;
+  border: 0px;
+  height: 28px;
+  width: 100px;
+  -webkit-appearance: none;
+  background-image: -webkit-gradient(linear, center top, center bottom, from(black), to(black));
+  -webkit-box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.25);
+  color: white;
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 13px;
+  margin-top: 15px;
+  margin-left: 137px; }

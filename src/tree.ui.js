@@ -191,13 +191,25 @@ Joshfire.define(['joshfire/class', 'joshfire/tree.ui', 'joshfire/vendor/undersco
 				  	  {
 				  	    id: 'title',
 				  	    type: UIPanel,
-				  	    content: 'Register'
+				  	    content: 'User Registration'
 				  	  },
 				  	  {
-				  	    id: 'login',
+				  	    id: 'firstname',
 				  	    type: FormInput,
 				  	    inputType: 'text',
-				  	    label: 'Login'
+				  	    label: 'First Name'
+				  	  },
+				  	  {
+				  	    id: 'lastname',
+				  	    type: FormInput,
+				  	    inputType: 'text',
+				  	    label: 'Last Name'
+				  	  },
+				  	  {
+				  	    id: 'email',
+				  	    type: FormInput,
+				  	    inputType: 'text',
+				  	    label: 'Email'
 				  	  },
 				  	  {
 				  	    id: 'password',
@@ -212,11 +224,6 @@ Joshfire.define(['joshfire/class', 'joshfire/tree.ui', 'joshfire/vendor/undersco
 				  	    onSelect:function() {
 				  	    	
 				  	    }
-				  	  },
-				  	  {
-				  	    id: 'forgot',
-				  	    type: UIButton,
-				  	    label: 'Forgot password'
 				  	  }
 				  	  
 				  	]
@@ -230,18 +237,29 @@ Joshfire.define(['joshfire/class', 'joshfire/tree.ui', 'joshfire/vendor/undersco
 				  	  {
 				  	    id: 'title',
 				  	    type: UIPanel,
-				  	    content: 'Choose photo upload'
+				  	    content: 'Participe upload a portrait'
 				  	  },
+				  	  
+
 				  	  {
 				  	    id: 'portrait',
 				  	    type: UIButton,
-				  	    label: 'p'
+				  	    label: 'Part 1'
 				  	  },
+				  	  
+				  	 
 				  	  {
 				  	    id: 'street',
 				  	    type: UIButton,
-				  	    label: 's'
+				  	    label: 'Part 2'
+				  	  },
+				  	  
+				  	   {
+				  	    id: 'title2',
+				  	    type: UIPanel,
+				  	    content: 'Upload a photo of a poster into the wild'
 				  	  }
+				  	  
 				  	]
 				  }
 				]
