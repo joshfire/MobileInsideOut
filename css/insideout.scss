@@ -517,7 +517,187 @@
  margin-left: 137px;
  }
  
+ /* photovalidate */
+ 
+#insideout__upload__view__photovalidate__photo{
+background-color: black;
+width: 320px;
+height: 332px;
+ }
+
+ 
+#insideout__upload__view__photovalidate__title {
+ text-align: center;
+ padding-top: 10px;
+ padding-bottom: 8px;
+ font-family: 'Anton', sans-serif;
+ font-size: 20px;
+ background-image: url('../img/triangle-bas.png'),
+ -webkit-gradient(linear, center top, center bottom, from(#c2c0c0), to(white));
+ background-repeat: no-repeat, repeat;
+ 
+}
+
+ 
+#insideout__upload__view__photovalidate__yes,
+#insideout__upload__view__photovalidate__no{
+ border-radius: 0px;
+ border: 0px;
+ height: 28px;
+ width: 100px; 
+ -webkit-appearance: none;
+ background-image:
+ -webkit-gradient(linear, center top, center bottom, from(black), to(black));
+ -webkit-box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.25);
+ color: white;
+ font-family: 'Helvetica Neue', sans-serif;
+ font-size: 13px;
+ float: left;
+ }
+ 
+#insideout__upload__view__photovalidate__no{
+ margin-left: 10px;
+ } 
+ 
+#insideout__upload__view__photovalidate__yes{
+ margin-left: 55px;
+ } 
+ 
+ /* statement */ 
+ 
+#insideout__upload__view__statementform{
+    background-image:
+    -webkit-gradient(linear, left top, right bottom, from(white), to(#c2c0c0));
+    height: 100%;
+}
 
 
+
+#insideout__upload__view__statementform{
+ margin-left: 41px;
+ margin-top: 53px;
+ background-image: url(../img/login.png); 
+ background-repeat: no-repeat;
+}
+
+#insideout__upload__view__statementform__title{
+ font-family: 'Anton', sans-serif;
+ font-size: 20px;
+ margin-left: 15px;
+
+}
+
+#insideout__upload__view__statementform__location,
+#insideout__upload__view__statementform__statement,
+#insideout__upload__view__statementform__personalstory,
+#insideout__upload__view__statementform__tags {
+ font-family: 'Helvetica Neue', sans-serif;
+ text-align: center;
+ font-size: 13px;
+ margin-top: 15px;
+ width: 237px;
+-webkit-box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.25);
+ border: 1px solid black;
+ height: 128px;
+ background-color: white;
+}
+
+#insideout__upload__view__statementform__location{
+ height: 56px;
+}
+
+
+
+#insideout__upload__view__statementform__location label,
+#insideout__upload__view__statementform__statement label,
+#insideout__upload__view__statementform__personalstory label,
+#insideout__upload__view__statementform__tags label {
+ -webkit-box-sizing: border-box;
+ display: block;
+ color: #fff;
+ background: #000;
+ width: 237px;
+ height: 28px;
+ line-height: 28px;
+ padding-left: 5px;
+ margin: 0;
+}
+
+
+#insideout__upload__view__statementform__location_input,
+#insideout__upload__view__statementform__statement_input,
+#insideout__upload__view__statementform__personalstory_input,
+#insideout__upload__view__statementform__tags_input {
+ -webkit-appearance: none;
+ -webkit-box-shadow: none;
+ -webkit-box-sizing: border-box;
+ padding: 8px;
+ margin: 0;
+ display: block;
+ border: 0;
+ height: 100px;
+ width: 100%;
+ border-radius: 0;
+ background: url('../img/triangle-bas.png') no-repeat top center;
+}
+
+#insideout__upload__view__statementform__location_input{
+ height: 28px;
+}
+
+ 
+#insideout__upload__view__statementform__ok{
+ border-radius: 0px;
+ border: 0px;
+ height: 28px;
+ width: 100px; 
+ -webkit-appearance: none;
+ background-image:
+ -webkit-gradient(linear, center top, center bottom, from(black), to(black));
+-webkit-box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.25);
+ color: white;
+ font-family: 'Helvetica Neue', sans-serif;
+ font-size: 13px;
+ margin-top: 20px; 
+ margin-left: 137px;
+ margin-bottom: 40px; 
+ }
+
+#insideout__upload__view__statementform__terms,
+#insideout__upload__view__statementform__confirm {
+ margin-top: 20px;
+ font-family: 'Helvetica Neue', sans-serif;
+ font-size: 13px;
+ width: 237px;
+}
+
+#insideout__upload__view__statementform__confirm label {
+ margin-left: 22px;
+}
+
+#insideout__upload__view__statementform__confirm_input {
+ float: left;
+ margin-top: -12px;
+ border-radius: 0px;
+ 
+}
+
+#insideout__upload__view__statementform__terms_input {
+ float: left;
+  margin-top: -12px;
+  border-radius: 0px;
+  background-color: white;
+}
+
+#insideout__upload__view__statementform__terms label {
+ margin-left: 22px;
+}
+
+#insideout__upload__view__thanks{
+ background: url('../img/merci.png');
+ background-repeat: no-repeat;
+ height: 430px;
+ margin-top: 20p;
+}
 
 

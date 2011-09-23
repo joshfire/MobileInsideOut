@@ -222,7 +222,7 @@ Joshfire.define(['joshfire/class', 'joshfire/tree.ui', 'joshfire/vendor/undersco
 				  	    type: UIButton,
 				  	    label: 'Ok',
 				  	    onSelect:function() {
-				  	    	
+				  	    	app.ui.element('/upload/view').switchTo('phototypeform');
 				  	    }
 				  	  }
 				  	  
@@ -244,14 +244,22 @@ Joshfire.define(['joshfire/class', 'joshfire/tree.ui', 'joshfire/vendor/undersco
 				  	  {
 				  	    id: 'portrait',
 				  	    type: UIButton,
-				  	    label: 'Part 1'
+				  	    label: 'Part 1',
+				  	    onSelect:function() {
+				  	    	app._phototype = 'portrait';
+				  	    	app.ui.element('/upload/view').switchTo('photovalidate');
+				  	    }
 				  	  },
 				  	  
 				  	 
 				  	  {
 				  	    id: 'street',
 				  	    type: UIButton,
-				  	    label: 'Part 2'
+				  	    label: 'Part 2',
+				  	    onSelect:function() {
+				  	    	app._phototype = 'street';
+				  	    	app.ui.element('/upload/view').switchTo('photovalidate');
+				  	    }
 				  	  },
 				  	  
 				  	   {
@@ -261,7 +269,117 @@ Joshfire.define(['joshfire/class', 'joshfire/tree.ui', 'joshfire/vendor/undersco
 				  	  }
 				  	  
 				  	]
+				  },
+				  {
+				  	id: 'photovalidate',
+				  	type: UIPanel,
+				  	autoShow:false,
+				  	children: [
+				  	  {
+				  	    id: 'photo',
+				  	    type: UIPanel,
+				  	    content: '<img src="" />'
+				  	  },
+				  	  {
+				  	    id: 'title',
+				  	    type: UIPanel,
+				  	    content: 'Upload this portrait ?'
+				  	  },
+				  	  
+
+				  	  {
+				  	    id: 'yes',
+				  	    type: UIButton,
+				  	    label: 'Yes',
+				  	    onSelect:function() {
+				  	    	if (app._phototype == 'street') {
+				  	    		//geoloc
+				  	    	} else if (app._phototype == 'portrait') {
+				  	    		app.ui.element('/upload/view').switchTo('statementform');
+				  	    	}
+				  	    	
+				  	    }
+				  	  },
+				  	  
+				  	 
+				  	  {
+				  	    id: 'no',
+				  	    type: UIButton,
+				  	    label: 'No'
+				  	  }
+				  	  
+				  	]
+				  },
+				  
+				  {
+				  	id: 'statementform',
+				  	type: UIPanel,
+				  	autoShow:false,
+				  	children: [
+				  	  {
+				  	    id: 'title',
+				  	    type: UIPanel,
+				  	    content: 'Statement'
+				  	  },
+				  	  {
+				  	    id: 'location',
+				  	    type: FormInput,
+				  	    inputType: 'text',
+				  	    label: 'Location (City, Country)'
+				  	  },
+				  	  {
+				  	    id: 'statement',
+				  	    type: FormInput,
+				  	    inputType: 'textarea',
+				  	    label: 'Statement',
+				  	    placeholder: 'What do you stand for or care about?'
+				  	  },
+				  	  {
+				  	    id: 'personalstory',
+				  	    type: FormInput,
+				  	    inputType: 'textarea',
+				  	    label: 'Personal Story (optional)'
+				  	  },
+				  	  {
+				  	    id: 'tags',
+				  	    type: FormInput,
+				  	    inputType: 'textarea',
+				  	    label: 'Tags',
+				  	    placeholder: 'Describe your personal'
+				  	  },
+				  	  {
+				  	    id: 'confirm',
+				  	    type: FormInput,
+				  	    inputType: 'checkbox',
+				  	    label: 'I confirm that I have permission to upload and use this portrait',
+				  	  },
+				  	  {
+				  	    id: 'terms',
+				  	    type: FormInput,
+				  	    inputType: 'checkbox',
+				  	    label: 'I agree with the terms of the contract',
+				  	  },
+				  	  {
+				  	    id: 'ok',
+				  	    type: UIButton,
+				  	    label: 'Ok',
+				  	    onSelect:function() {
+				  	    	app.ui.element('/upload/view').switchTo('thanks');
+				  	    }
+				  	  }
+				  	  
+				  	]
+				  },
+				  {
+				  	id: 'thanks',
+				  	type: UIPanel,
+				  	content:'',
+				  	autoShow:false,
+				  	onShow:function() {
+				  		//todo bind click to back to home & upload view reset
+				  	}
 				  }
+
 				]
 			  },
 			  
