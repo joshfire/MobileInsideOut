@@ -3,7 +3,10 @@
 /* home */
 
 
-#insideout__browse__header, #insideout__upload__header{
+
+
+#insideout__browse__header, 
+#insideout__upload__header{
 
  height: 50px; 
  background-image:
@@ -16,18 +19,25 @@
     color-stop(0.52, rgb(255,255,255)),
     color-stop(0, rgb(217,217,217)));  
   background-repeat: no-repeat, repeat;
-  -webkit-box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.25);
   background-position:5% 50%;
   border: none;
 }
 
 #insideout__upload__header{
-	background-position: 12% 50%;
+ background-position: 12% 50%;
+
+}
+
+#insideout__browse__header{
+ -webkit-box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.4); 
+ z-index: 9;
+ position:relative;
+
 }
 
 #insideout__browse__uploadbutton {
-  position: relative;
-  z-index: 10;
+ position: relative;
+ z-index: 10;
  width: 75px;
  height: 66px;
  border-radius: 0px;
@@ -52,6 +62,26 @@
  background-position: 50% 30%, 0 0;
 
 }
+
+
+#insideout__browse__view {
+  position: absolute;
+  z-index: 1;
+  top: 50px;
+  left: 0;
+  right: 0;
+  bottom: 47px;
+  background-image: -webkit-gradient(linear, center top, center bottom, from(white), to(#d2d1d1));
+
+}
+
+#insideout__browse__view > div {
+  height: 362px;
+  color: #000000;
+  margin-left: 14px;  
+}
+
+
 
 #insideout__browse__menu,#insideout__entry__menu {
   width:100%;
@@ -159,28 +189,14 @@
   
 }
 
-#insideout__browse__view {
-  position: absolute;
-  z-index: 1;
-  top: 65px;
-  left: 0;
-  right: 0;
-  bottom: 46px;
-  background-image: -webkit-gradient(linear, center top, center bottom, from(white), to(#d2d1d1));
-}
-
-#insideout__browse__view > div {
-  height:350px;
-  color: #000000;
-  margin-left: 14px;  
-}
-
 #titre{
  font-family: 'Anton', sans-serif;
  font-size: 39px;
  margin-bottom: 3px;
+ margin-top: 10px;
  line-height: 40px;
 }
+
 
 #soustitre{
  font-family: 'Helvetica Neue-Bold', sans-serif;
@@ -233,8 +249,18 @@
 /* participation */
 
 #insideout__upload{
-    background-image:
-    -webkit-gradient(linear, left top, right bottom, from(white), to(#c2c0c0));
+  background-image:
+  -webkit-gradient(linear, left top, right bottom, from(white), to(#c2c0c0));
+  width: 320px;
+  position: absolute;
+  z-index: 1px;
+
+}
+
+#insideout__upload__header {
+	-webkit-box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.25);
+	-moz-box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.25);
+
 }
 
 #insideout__upload__header__home{
@@ -244,7 +270,6 @@
     url(../img/home.png), 
     -webkit-gradient(linear, center top, center bottom, from(#d2d1d1), to(#ececec));
     border-radius: 0px;
-	-webkit-box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.25);
  	border: 0;
     height: 35px;
     width: 35px;
@@ -253,6 +278,8 @@
     padding: 0;
     position: relative;
 	z-index: 10;
+	-webkit-box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.25);
+
 }
 
 #insideout__upload__header__prev{
@@ -344,7 +371,7 @@
  font-family: 'Helvetica Neue', sans-serif;
  font-size: 13px;
  margin-top: 10px; 
- margin-left: 124px;
+ margin-left: 123px;
  text-decoration: underline;
  background: transparent;
  }
@@ -377,7 +404,7 @@
  font-size: 13px;
  border: 0px;
  height: 28px;
- width: 110px;
+ width: 112px;
  border-radius: 0px;
  text-align: center;
 }
@@ -388,6 +415,8 @@
  height: 412px;
  width: 320px;
  background-image: url(../img/choix.png);
+   position: absolute;
+  z-index: 1px;
 }
 
 #insideout__upload__view__phototypeform__portrait,
@@ -535,6 +564,7 @@ height: 332px;
  background-image: url('../img/triangle-bas.png'),
  -webkit-gradient(linear, center top, center bottom, from(#c2c0c0), to(white));
  background-repeat: no-repeat, repeat;
+ 
  
 }
 

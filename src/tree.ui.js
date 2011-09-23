@@ -280,6 +280,7 @@ Joshfire.define(['joshfire/class', 'joshfire/tree.ui', 'joshfire/vendor/undersco
 				  	    type: UIPanel,
 				  	    content: '<img src="" />'
 				  	  },
+				  	  
 				  	  {
 				  	    id: 'title',
 				  	    type: UIPanel,
