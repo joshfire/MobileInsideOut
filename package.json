@@ -1,11 +1,22 @@
 {
   "name": "mobileinsideout",
+  "fullName":"Mobile Inside Out",
   "description": "Iphone App of InsideOut",
   "author": "Joshfire",
   "version": "0.0.1",
-  "dependencies": {
-    "underscore": ">= 1.1.x",
-		"mkdirp":">= 0.0.6"
-  },
-  "engine": "node = 0.4.x"
+  "joshfire":{
+  	"mustache":true,
+  	"devices":[
+  		{
+  			"devices":["phone","tablet"],
+  			"startfile":"index.iphone.html"
+  		}
+  	],
+  	"datasources":{
+  		"main":{
+  			"title":"Photo stream",
+  			"description":"Will appear in the mosaic"
+  		}
+  	}
+  }
 }

@@ -1,4 +1,4 @@
-Joshfire.define(['joshfire/class', 'joshfire/tree.ui', 'joshfire/vendor/underscore','joshfire/uielements/list','joshfire/uielements/panel','joshfire/uielements/panel.manager','joshfire/uielements/map','templates_compiled/js/share','templates_compiled/js/aboutinsideout','templates_compiled/js/aboutjr','templates_compiled/js/registerform','joshfire/uielements/button','joshfire/uielements/forminput'], function(Class, UITree, _,UIList,UIPanel,UIPanelManager,UIMap,TplShare,TplAboutInsideOut,TplAboutJR,TplRegisterForm,UIButton, FormInput) {
+Joshfire.define(['joshfire/class', 'joshfire/tree.ui', 'joshfire/vendor/underscore','joshfire/uielements/list','joshfire/uielements/panel','joshfire/uielements/panel.manager','templates_compiled/js/share','templates_compiled/js/aboutinsideout','templates_compiled/js/aboutjr','templates_compiled/js/registerform','joshfire/uielements/button','joshfire/uielements/forminput'], function(Class, UITree, _,UIList,UIPanel,UIPanelManager,TplShare,TplAboutInsideOut,TplAboutJR,TplRegisterForm,UIButton, FormInput) {
 
   return Class(UITree, {
 
@@ -367,12 +367,12 @@ Joshfire.define(['joshfire/class', 'joshfire/tree.ui', 'joshfire/vendor/undersco
                     //dataPath:'/photos',
                     autoShow:true
                   },
-                  {
+                  /*{
                     'id':'map',
                     type:UIMap,
                     //dataPath:'/photos',
                     autoShow:false
-                  },
+                  },*/
                   {
                     'id':'statement',
                     type:UIPanel,

@@ -1,6 +1,4 @@
 *.pyc
 .sass-cache/
-export/
 export-optimized/
-templates_compiled/
 node_modules/
