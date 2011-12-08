@@ -4,7 +4,9 @@
   "description": "Iphone App of InsideOut",
   "author": "Joshfire",
   "version": "0.0.1",
+  "private":true,
   "joshfire":{
+  	"private":true,
   	"mustache":true,
   	"devices":[
   		{
