@@ -11,12 +11,6 @@ def install():
     local('rm -rf node_modules')
     local('npm install')
 
-def serve():
-    local("node server.js")
-
-def nodemon():
-    local("nodemon server.js")
-
 
 # Deployment -------------------------------------------------------------------
 
@@ -28,6 +22,8 @@ def phonegap():
 
 env.export_dir = os.path.join(os.path.dirname(__file__), "export")
 
+def scsswatch():
+    local("sass --scss --watch css/:css/")
 
 def localexport():
     spec()
