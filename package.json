@@ -11,7 +11,7 @@
   	"devices":[
   		{
   			"devices":["phone","tablet"],
-  			"startfile":"index.iphone.html"
+  			"startfile":"index.html"
   		}
   	],
   	"datasources":{
