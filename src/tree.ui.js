@@ -35,7 +35,7 @@ Joshfire.define(['joshfire/class', 'joshfire/tree.ui', 'joshfire/vendor/undersco
                   {
                     'id':'photos',
                     type:UIList,
-                    itemTemplate:"<img src='<%= item.image.contentURL %>' width='150' height='<%= parseInt(parseInt(item.height,10)*(150/parseInt(item.width,10))) %>' style='float:left;'/>",
+                    itemTemplate:"<div style='width:138px;height:<%= parseInt(parseInt(item.height,10)*(138/parseInt(item.width,10))) %>;padding-top:15px;padding-right:15px'><img src='<%= item.image.contentURL %>' style='width:100%'></div>",
                     autoShow:true,
                     onSelect:function(elt,evt,data) {
                       var photoId = data[0][0];
@@ -49,7 +49,7 @@ Joshfire.define(['joshfire/class', 'joshfire/tree.ui', 'joshfire/vendor/undersco
                     },
                     onAfterShow:function(elt) {
 						elt.setDataPath("/photos/");			
-						 						$("#"+elt.htmlId+" ul").append("<li style='clear:both;'>&nbsp;</li>").masonry();
+						$("#"+elt.htmlId+" ul").append("<li style='clear:both;'>&nbsp;</li>").masonry();
                     },
                     onAfterRefresh:function(elt) {
                       $("#"+elt.htmlId+" ul").append("<li style='clear:both;'>&nbsp;</li>").masonry();

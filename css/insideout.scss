@@ -36,6 +36,7 @@ html,body {
  z-index: 9;
  position:relative;
 
+
 }
 
 #insideout__browse__uploadbutton {
@@ -48,7 +49,7 @@ html,body {
  font-family: 'Anton', sans-serif;
  font-size: 15px;
  line-height: 105px;
- margin-left: 230px;
+ margin-left: 225px;
  margin-top: -50px;
  padding: 0;
  -webkit-box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.25); 
@@ -111,6 +112,7 @@ html,body {
     color-stop(0.52, rgb(255,255,255)),
     color-stop(0, rgb(217,217,217)));
   z-index: 99;  
+   border-top: 1px solid #000000;
     
   background-image: -moz-linear-gradient(
     right center,
@@ -122,8 +124,9 @@ html,body {
  	position: relative;
  	z-index: 10;
     list-style-type:none;
-    border-top: 1px solid #000000;
     width:100%;	
+    width: 320px;
+    margin: auto;
     
     
     li {
@@ -266,6 +269,12 @@ html,body {
  margin-top: 10px;
 }
 
+#insideout__browse__view__share a{
+  color: #000000;
+  text-decoration: none;
+
+}
+
 
 /* participation */
 
@@ -274,7 +283,6 @@ html,body {
   -webkit-gradient(linear, left top, right bottom, from(white), to(#c2c0c0));
   width: 320px;
   position: absolute;
-  z-index: 1px;
 
 }
 
@@ -749,6 +757,14 @@ height: 332px;
  background-repeat: no-repeat;
  height: 430px;
  margin-top: 20p;
+}
+
+
+#insideout__browse__view__participate {
+ background: url('../img/participate.png');
+ background-repeat: no-repeat;
+ height: 430px;
+ margin-top: 20px;
 }
 
 

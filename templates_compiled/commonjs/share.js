@@ -1,3 +1,3 @@
 module.exports = function(obj,_) {
-var __p=[],print=function(){__p.push.apply(__p,arguments);};with(obj||{}){__p.push('<h1 id="titre">SHARE <br>\nINSIDE OUT</h1>\n<img src="img/point.png">\n<ul id="share">\n<li><img src="img/facebook.png">Facebook</li>\n<li><img src="img/twitter.png">Twitter</li>\n<li><img src="img/google.png">Google+</li>\n<img src="img/pointpetit.png">\n<li><img src="img/mail.png">E-mail</li>\n</ul>\n\n');}return __p.join('');
+var __p=[],print=function(){__p.push.apply(__p,arguments);};with(obj||{}){__p.push('<h1 id="titre">SHARE <br>\nINSIDE OUT</h1>\n<img src="img/point.png">\n<ul id="share">\n<li><img src="img/facebook.png"><a href="http://www.facebook.com/InsideOutProject"> Facebook </a></li>\n<li><img src="img/twitter.png"><a href="http://twitter.com/InsideOutProj"> Twitter </a></li>\n<li><img src="img/mail.png"><a href="mailto:test@hioxindia.com"> E-mail </a></li>\n</ul>\n\n');}return __p.join('');
 }
