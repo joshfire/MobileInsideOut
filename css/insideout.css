@@ -9,7 +9,7 @@ html, body {
   height: 50px;
   background-image: url(../img/logo.png), -webkit-gradient(linear, right top, left top, color-stop(1, #d9d9d9), color-stop(0.52, white), color-stop(0, #d9d9d9));
   background-repeat: no-repeat, repeat;
-  background-position: 5% 50%;
+  background-position: 9px 50%;
   border: none; }
 
 #insideout__upload__header {
@@ -23,7 +23,7 @@ html, body {
 #insideout__browse__uploadbutton {
   position: relative;
   z-index: 10;
-  width: 75px;
+  width: 88px;
   height: 66px;
   border-radius: 0px;
   border: 0;
@@ -45,16 +45,32 @@ html, body {
   left: 0;
   right: 0;
   bottom: 47px;
+  overflow: hidden;
   background-image: -webkit-gradient(linear, center top, center bottom, from(white), to(#d2d1d1)); }
 
 #insideout__browse__view > div {
-  height: 362px;
   color: #000000;
-  margin-left: 14px; }
+  -webkit-box-sizing: border-box;
+  padding-left: 14px;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0; }
+
+#insideout__browse__view__aboutinside {
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0; }
 
 #insideout__browse__menu, #insideout__entry__menu {
   width: 100%;
   background-image: -webkit-gradient(linear, right top, left top, color-stop(1, #d9d9d9), color-stop(0.52, white), color-stop(0, #d9d9d9));
+  z-index: 99;
   background-image: -moz-linear-gradient(right center, #d9d9d9 100%, white 52%, #d9d9d9 0%); }
   #insideout__browse__menu ul, #insideout__entry__menu ul {
     position: relative;
@@ -67,7 +83,7 @@ html, body {
       width: 79px;
       height: 46px;
       font-family: 'HelveticaNeue-Bold', sans-serif;
-      color: #3c3b3b;
+      color: #696969;
       font-size: 10px;
       text-align: center;
       line-height: 69px; }
@@ -125,21 +141,22 @@ html, body {
   color: #272727;
   margin-top: 3px;
   margin-bottom: 3px;
-  line-height: 22px; }
+  line-height: 22px;
+  width: 290px; }
 
 #question {
   font-family: 'Helvetica Neue-Bold', sans-serif;
-  font-size: 15px;
+  font-size: 16px;
   color: #272727;
-  margin-top: 10px;
-  margin-bottom: 3px;
+  margin-top: 16px;
+  margin-bottom: 6px;
   line-height: 22px; }
 
 #p {
   font-family: 'Helvetica Neue', sans-serif;
   font-size: 16px;
   line-height: 22px;
-  margin-right: 14px;
+  margin-right: 20 px;
   width: 290px; }
 
 #jrphoto {
