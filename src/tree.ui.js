@@ -1,4 +1,4 @@
-Joshfire.define(['joshfire/class', 'joshfire/tree.ui', 'joshfire/vendor/underscore','joshfire/uielements/list','joshfire/uielements/panel','joshfire/uielements/panel.manager','templates_compiled/js/share','templates_compiled/js/aboutinsideout','templates_compiled/js/aboutjr','templates_compiled/js/registerform','joshfire/uielements/button','joshfire/uielements/forminput', 'src/utils/jquery.masonry.js'], function(Class, UITree, _,UIList,UIPanel,UIPanelManager,TplShare,TplAboutInsideOut,TplAboutJR,TplRegisterForm,UIButton, FormInput, $) {
+Joshfire.define(['joshfire/class', 'joshfire/tree.ui', 'joshfire/vendor/underscore','joshfire/uielements/list','joshfire/uielements/panel','joshfire/uielements/panel.manager','templates_compiled/js/share','templates_compiled/js/aboutinsideout','templates_compiled/js/aboutjr','templates_compiled/js/registerform','templates_compiled/js/participate','joshfire/uielements/button','joshfire/uielements/forminput', 'src/utils/jquery.masonry.js'], function(Class, UITree, _,UIList,UIPanel,UIPanelManager,TplShare,TplAboutInsideOut,TplAboutJR,TplRegisterForm,TplParticipate,UIButton, FormInput, $) {
 
   return Class(UITree, {
 
@@ -24,7 +24,7 @@ Joshfire.define(['joshfire/class', 'joshfire/tree.ui', 'joshfire/vendor/undersco
                 type:UIButton,
                 label:"PARTICIPATE",
                 onSelect:function() {
-                  app.ui.element('').switchTo("upload");
+                  app.ui.element('/browse/view').switchTo("participate");
                 }
               },
               {
@@ -35,7 +35,7 @@ Joshfire.define(['joshfire/class', 'joshfire/tree.ui', 'joshfire/vendor/undersco
                   {
                     'id':'photos',
                     type:UIList,
-                    itemTemplate:"<img src='<%= item.image %>' width='150' height='<%= parseInt(parseInt(item.height,10)*(150/parseInt(item.width,10))) %>' style='float:left;'/>",
+                    itemTemplate:"<img src='<%= item.image.contentURL %>' width='150' height='<%= parseInt(parseInt(item.height,10)*(150/parseInt(item.width,10))) %>' style='float:left;'/>",
                     dataPath:'/photos',
                     autoShow:true,
                     onSelect:function(elt,evt,data) {
@@ -70,6 +70,13 @@ Joshfire.define(['joshfire/class', 'joshfire/tree.ui', 'joshfire/vendor/undersco
                     'id':'aboutjr',
                     type:UIList,
                     itemInnerTemplate:TplAboutJR,
+                    data:[{"id":"void"}],
+                    autoShow:false
+                  },
+                  {
+                    'id':'participate',
+                    type:UIList,
+                    itemInnerTemplate:TplParticipate,
                     data:[{"id":"void"}],
                     autoShow:false
                   },
@@ -125,6 +132,7 @@ Joshfire.define(['joshfire/class', 'joshfire/tree.ui', 'joshfire/vendor/undersco
                   }
                 ]
               },
+              /*
               {
                 id:'view',
                 type:UIPanelManager,
@@ -388,7 +396,7 @@ Joshfire.define(['joshfire/class', 'joshfire/tree.ui', 'joshfire/vendor/undersco
 
 				]
 			  },
-			  
+			  */
 			  /*{
                 id:'view',
                 type: UIPanelManager,
