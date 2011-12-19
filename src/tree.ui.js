@@ -35,7 +35,7 @@ Joshfire.define(['joshfire/class', 'joshfire/tree.ui', 'joshfire/vendor/undersco
                   {
                     'id':'photos',
                     type:UIList,
-                    itemTemplate:"<img src='<%= item.image %>' width='150' height='<%= parseInt(parseInt(item.height,10)*(150/parseInt(item.width,10))) %>' style='float:left;'/>",
+                    itemTemplate:"<img src='<%= item.image.contentURL %>' width='150' height='<%= parseInt(parseInt(item.height,10)*(150/parseInt(item.width,10))) %>' style='float:left;'/>",
                     dataPath:'/photos',
                     autoShow:true,
                     onSelect:function(elt,evt,data) {
