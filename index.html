@@ -9,19 +9,26 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <script src="js/phonegap-1.0.0.js"></script>
     <script src="js/NativeControls.js"></script>
-    <script data-main="./" src="joshfire/adapters/ios/bootstrap.js"></script>
 
     <script data-joshfire-bootstrap src='http://platform.joshfire.com/bootstrap/4eef03a67724322a61000e59/auto/phone/'></script>
   </head>
   <body>
-    <script>
     
+    <div id="splashscreen"></div>
+    <script>
+    Factory = Joshfire.factory;</script>
+    <script data-main="./" src="joshfire/adapters/ios/bootstrap.js"></script>
+     <script>
+    Joshfire.factory = Factory;</script>
+	<script>
+		Joshfire.debug=true;
+      Joshfire.onReady(function() {
       Joshfire.require(['src/app.ios'], function(BigguppApp) {
         Joshfire.onReady(function() {
           window._app = new BigguppApp();
         });
       });
+      });
     </script>
-    <div id="splashscreen"></div>
   </body>
 </html>

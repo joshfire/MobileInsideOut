@@ -27,7 +27,15 @@ Joshfire.define(['joshfire/class', 'joshfire/tree.data', 'joshfire/vendor/unders
               }));
             });
             */
-            Joshfire.factory.getDataSource("main").find({},function(err,data) {
+            var ds;
+            if (Joshfire.factory.getDataSource("main").children) {
+            	ds = Joshfire.factory.getDataSource("main").children[0];
+            } else {
+            	ds = Joshfire.factory.getDataSource("main");
+            }
+            
+            ds.find({},function(err,data) {
+
               cb(null,_.map(data.entries,function(i,n) {
                 i.id=n;
                 return i;

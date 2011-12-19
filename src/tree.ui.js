@@ -36,7 +36,6 @@ Joshfire.define(['joshfire/class', 'joshfire/tree.ui', 'joshfire/vendor/undersco
                     'id':'photos',
                     type:UIList,
                     itemTemplate:"<img src='<%= item.image.contentURL %>' width='150' height='<%= parseInt(parseInt(item.height,10)*(150/parseInt(item.width,10))) %>' style='float:left;'/>",
-                    dataPath:'/photos',
                     autoShow:true,
                     onSelect:function(elt,evt,data) {
                       var photoId = data[0][0];
@@ -48,8 +47,11 @@ Joshfire.define(['joshfire/class', 'joshfire/tree.ui', 'joshfire/vendor/undersco
                       
                       app.ui.element('').switchTo("entry");
                     },
+                    onAfterShow:function(elt) {
+						elt.setDataPath("/photos/");			
+						 						$("#"+elt.htmlId+" ul").append("<li style='clear:both;'>&nbsp;</li>").masonry();
+                    },
                     onAfterRefresh:function(elt) {
-
                       $("#"+elt.htmlId+" ul").append("<li style='clear:both;'>&nbsp;</li>").masonry();
                     }
                   },
@@ -99,7 +101,7 @@ Joshfire.define(['joshfire/class', 'joshfire/tree.ui', 'joshfire/vendor/undersco
                   {'id':'aboutinside','label':'INSIDE OUT'},
                   {'id':'aboutjr','label':'ABOUT'},
                   {'id':'share','label':'SHARE'}
-                ] 
+                ]
               }
             
             ]
