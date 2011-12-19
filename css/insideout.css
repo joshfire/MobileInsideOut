@@ -1,5 +1,9 @@
 @import url(reset.css);
 /* home */
+html, body {
+  height: 100%;
+  width: 100%; }
+
 #insideout__browse__header,
 #insideout__upload__header {
   height: 50px;

@@ -12,7 +12,7 @@ Joshfire.define(['joshfire/class', 'joshfire/tree.data', 'joshfire/vendor/unders
         {
           id: 'photos',
           children: function(query,cb) {
-            DS.request({
+            /*DS.request({
               "url":APIROOT+"photos?page="+(query.skip/100+1),
               "dataType":"jsonp"
             },function(err,data) {
@@ -24,6 +24,13 @@ Joshfire.define(['joshfire/class', 'joshfire/tree.data', 'joshfire/vendor/unders
                   "label":photo.name,
                   "meta":photo
                 };
+              }));
+            });
+            */
+            Joshfire.factory.getDataSource("main").find({},function(err,data) {
+              cb(null,_.map(data.entries,function(i,n) {
+                i.id=n;
+                return i;
               }));
             });
           }

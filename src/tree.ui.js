@@ -1,4 +1,4 @@
-Joshfire.define(['joshfire/class', 'joshfire/tree.ui', 'joshfire/vendor/underscore','joshfire/uielements/list','joshfire/uielements/panel','joshfire/uielements/panel.manager','joshfire/uielements/map','templates_compiled/js/share','templates_compiled/js/aboutinsideout','templates_compiled/js/aboutjr','templates_compiled/js/registerform','joshfire/uielements/button','joshfire/uielements/forminput'], function(Class, UITree, _,UIList,UIPanel,UIPanelManager,UIMap,TplShare,TplAboutInsideOut,TplAboutJR,TplRegisterForm,UIButton, FormInput) {
+Joshfire.define(['joshfire/class', 'joshfire/tree.ui', 'joshfire/vendor/underscore','joshfire/uielements/list','joshfire/uielements/panel','joshfire/uielements/panel.manager','templates_compiled/js/share','templates_compiled/js/aboutinsideout','templates_compiled/js/aboutjr','templates_compiled/js/registerform','joshfire/uielements/button','joshfire/uielements/forminput', 'src/utils/jquery.masonry.js'], function(Class, UITree, _,UIList,UIPanel,UIPanelManager,TplShare,TplAboutInsideOut,TplAboutJR,TplRegisterForm,UIButton, FormInput, $) {
 
   return Class(UITree, {
 
@@ -35,6 +35,7 @@ Joshfire.define(['joshfire/class', 'joshfire/tree.ui', 'joshfire/vendor/undersco
                   {
                     'id':'photos',
                     type:UIList,
+                    itemTemplate:"<img src='<%= item.image %>' width='150' height='<%= parseInt(parseInt(item.height,10)*(150/parseInt(item.width,10))) %>' style='float:left;'/>",
                     dataPath:'/photos',
                     autoShow:true,
                     onSelect:function(elt,evt,data) {
@@ -46,6 +47,10 @@ Joshfire.define(['joshfire/class', 'joshfire/tree.ui', 'joshfire/vendor/undersco
                       app.ui.element('/entry/view/share').setDataPath("/photos/"+photoId);
                       
                       app.ui.element('').switchTo("entry");
+                    },
+                    onAfterRefresh:function(elt) {
+
+                      $("#"+elt.htmlId+" ul").append("<li style='clear:both;'>&nbsp;</li>").masonry();
                     }
                   },
                   /*{
@@ -486,12 +491,12 @@ Joshfire.define(['joshfire/class', 'joshfire/tree.ui', 'joshfire/vendor/undersco
                     //dataPath:'/photos',
                     autoShow:true
                   },
-                  {
+                  /*{
                     'id':'map',
                     type:UIMap,
                     //dataPath:'/photos',
                     autoShow:false
-                  },
+                  },*/
                   {
                     'id':'statement',
                     type:UIPanel,
